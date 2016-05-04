@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Funky Store</title>
+        <link rel="stylesheet" type="text/css" href="{% static "funkycore/style.css" %}" />
+    </head>
+    
+    <body>
+        <center>
+            <a href="/"><img style="margin: 8px" src="{% static "funkycore/funky.png" %}"/></a><br>
+            <i style="font-size: 7pt">Funky Store 2nd generation &copy; 2016 MEDVEDx64. Thanks to dmitro.</i><br>
+            {% block content %}
+            {% endblock %}
+        </center>
+    </body>
+</html>

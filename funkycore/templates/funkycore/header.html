@@ -1,0 +1,16 @@
+<b>Account:</b> {{ user.username }}, <b>Balance:</b> {{ user.userprofile.balance }}f
+(<a href="/logout/">Logout</a>)
+<hr>
+<a href="/">Home</a>
+<a href="/transfer/">Transfer</a>
+<a href="/settings/">Settings</a>
+{% if user.is_staff %}
+<a style="color: #fba" href="/admin/">Admin</a>
+{% endif %}
+<hr>
+{% if message %}
+<div style="background-color: #e82">
+    <b>{{ message }}</b>
+</div>
+<hr>
+{% endif %}

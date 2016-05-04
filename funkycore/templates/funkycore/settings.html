@@ -1,0 +1,18 @@
+{% extends "funkycore/base.html" %}
+{% block content %}
+
+{% include "funkycore/header.html" %}
+<form method="post" action="/settings/">
+    {% csrf_token %}
+    <table>
+        {% for e in form %}
+        <tr>
+            <td>{{ e.label_tag }}</td>
+            <td>{{ e }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock %}
